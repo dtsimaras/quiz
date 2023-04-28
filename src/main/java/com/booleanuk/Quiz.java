@@ -25,18 +25,23 @@ public class Quiz {
                 Would you like to give it a try?(y/n) """;
         System.out.println(welcomeText);
 
-        try {
-            char start = scanner.next().trim().toLowerCase().charAt(0);
-            if (start == 'y')
-                startQuiz();
-            else if (start == 'n')
-                System.out.println("\nExiting quiz");
-            else {
-                System.out.println("Please enter y for yes or n for no");
-                this.run();
+        while (true) {
+            try {
+                char start = scanner.next().trim().toLowerCase().charAt(0);
+                if (start == 'y') {
+                    startQuiz();
+                    break;
+                }
+                else if (start == 'n') {
+                    System.out.println("\nExiting quiz");
+                    break;
+                }
+                else {
+                    System.out.println("Please enter y for yes or n for no");
+                }
+            } catch (Exception e) {
+                System.out.println(e.getStackTrace());
             }
-        } catch (Exception e) {
-            System.out.println(e.getStackTrace());
         }
     }
 
@@ -51,7 +56,6 @@ public class Quiz {
 
         for (Question question : questions) {
             // Print Question and Possible Answers
-            char answer = 'A';
             System.out.println(question.getQuestion());
             question.getPossibleAnswers().forEach((k, v) -> {
                 System.out.println(k + ": " + v);
