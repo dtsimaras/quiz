@@ -96,8 +96,6 @@ public class Quiz {
 
     public void createSampleQuestions() {
 
-        Map<Character, String> possibleAnswers = new HashMap<>();
-        possibleAnswers.put('A', "Asia");
         Question q1 = new Question("Where is Greece?",
                 "Europe",
                 "Asia", "Europe", "America", "Africa");
