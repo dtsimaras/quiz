@@ -2,6 +2,7 @@ package com.booleanuk;
 
 import java.util.Scanner;
 
+// TODO: refactor this class? Should this be a class?
 public class UserInterface {
     // @Description: this class was created in an effort to make quiz classs
     // independent of the UI, so possibly we can change from console to a different
