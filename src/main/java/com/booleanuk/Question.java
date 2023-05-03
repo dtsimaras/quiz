@@ -1,20 +1,27 @@
 package com.booleanuk;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class Question {
     private String question;
     private String correctAnswer;
-    private Map<Character, String>  possibleAnswers;
-    public Question (String question, String correctAnswer, String... possibleAnswers ) {
+    private String[] possibleAnswers;
+
+    public Question () {}
+
+    public Question(
+//            @JsonProperty("question")
+            String question,
+//            @JsonProperty("correctAnswer")
+            String correctAnswer,
+//            @JsonProperty("possibleAnswers")
+            String... possibleAnswers) {
         this.question = question;
         this.correctAnswer = correctAnswer;
-        this.possibleAnswers = new HashMap<>();
-        char key = 'A';
-        for (String answer: possibleAnswers) {
-            this.possibleAnswers.put(key++, answer);
-        }
+        this.possibleAnswers = possibleAnswers;
     }
 
     public String getQuestion() {
@@ -25,7 +32,7 @@ public class Question {
         return correctAnswer;
     }
 
-    public Map<Character, String> getPossibleAnswers() {
+    public String[] getPossibleAnswers() {
         return possibleAnswers;
     }
 }

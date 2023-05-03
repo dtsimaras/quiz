@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Where is Greece?",
+    "correctAnswer": "Europe",
+    "possibleAnswers": [
+      "Asia",
+      "Europe",
+      "America",
+      "Africa"
+    ]
+  },
+  {
+    "question": "In Greek Mythology, who is the Queen of the Underworld and wife of Hades?",
+    "correctAnswer": "Persephone",
+    "possibleAnswers": [
+      "Artemis",
+      "Athena",
+      "Persephone",
+      "Hera"
+    ]
+  },
+  {
+    "question": "Which house was Harry Potter almost sorted into?",
+    "correctAnswer": "Slytherin",
+    "possibleAnswers": [
+      "Gryffindor",
+      "Hufflepuff",
+      "Ravenclaw",
+      "Slytherin"
+    ]
+  },
+  {
+    "question": "Which country gifted the Statue of Liberty to the US??",
+    "correctAnswer": "France",
+    "possibleAnswers": [
+      "England",
+      "France",
+      "Canada",
+      "Spain"
+    ]
+  },
+  {
+    "question": "Which planet is closest to Earth?",
+    "correctAnswer": "Venus",
+    "possibleAnswers": [
+      "Venus",
+      "Mars",
+      "Jupiter",
+      "Mercury"
+    ]
+  }
+]
