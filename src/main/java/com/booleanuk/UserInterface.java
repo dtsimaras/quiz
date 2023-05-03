@@ -4,13 +4,19 @@ import java.util.Scanner;
 
 // TODO: refactor this class? Should this be a class?
 public class UserInterface {
-    // @Description: this class was created in an effort to make quiz classs
+    // Description: this class was created in an effort to make quiz classs
     // independent of the UI, so possibly we can change from console to a different
     // way to communicate with user in the future, or in different implementations
-    private static final Scanner scanner = new Scanner(System.in);
 
     public static char getUserInput() {
-        return scanner.nextLine().trim().toUpperCase().charAt(0);
+        try {
+            Scanner scanner = new Scanner(System.in);
+            char userInput = scanner.nextLine().trim().toUpperCase().charAt(0);
+            return userInput;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 'N';
+        }
     }
 
     public static void showMessage(String message) {
